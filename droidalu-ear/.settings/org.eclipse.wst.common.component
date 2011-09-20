@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="droidalu-ear">
+        <wb-resource deploy-path="/" source-path="/EarContent"/>
+        <dependent-module archiveName="droidalu-ejb.jar" deploy-path="/" handle="module:/resource/droidalu-ejb/droidalu-ejb">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="droidalu.war" deploy-path="/" handle="module:/resource/droidalu/droidalu">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="droidalu.war" deploy-path="/" handle="module:/resource/droidalu-web/droidalu-web">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

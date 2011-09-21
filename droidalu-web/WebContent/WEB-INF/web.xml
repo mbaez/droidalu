@@ -6,7 +6,7 @@
 
    <context-param>
       <param-name>javax.ws.rs.core.Application</param-name>
-      <param-value>droidalu.main.service.LibraryApplication</param-value>
+      <param-value>py.com.droidalu.service.DroidAlu</param-value>
    </context-param>
 
    <context-param>

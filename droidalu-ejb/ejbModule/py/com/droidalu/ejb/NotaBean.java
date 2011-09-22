@@ -1,7 +1,7 @@
 package py.com.droidalu.ejb;
 import javax.ejb.Local;
 
-import py.com.droidalu.dto.ListaNotas;
+import py.com.droidalu.dto.Alumno;
 /**
  * 
  * @author Maximiliano Báez <mxbg.py@gmail.com>
@@ -10,5 +10,5 @@ import py.com.droidalu.dto.ListaNotas;
 
 @Local
 public interface NotaBean {
-	public ListaNotas getNotas(String id, String pin);
+	public Alumno getNotas(String id, String pin);
 }

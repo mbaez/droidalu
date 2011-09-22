@@ -8,7 +8,7 @@ import javax.ejb.Stateless;
 import org.jboss.ejb3.annotation.LocalBinding;
 
 import py.com.droidalu.dao.NotaHelper;
-import py.com.droidalu.dto.ListaNotas;
+import py.com.droidalu.dto.Alumno;
 import py.com.droidalu.dto.Nota;
 
 /**
@@ -37,7 +37,7 @@ public class NotaBeanImpl implements NotaBean {
 	 *            el pin del usuario
 	 */
 	@Override
-	public ListaNotas getNotas(String id, String pin) {
+	public Alumno getNotas(String id, String pin) {
 		helper = new NotaHelper(); 
 		return helper.getNotasFinales(id, pin);
 	}

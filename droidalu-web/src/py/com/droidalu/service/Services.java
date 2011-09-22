@@ -7,7 +7,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 
-import py.com.droidalu.dto.ListaNotas;
+import py.com.droidalu.dto.Alumno;
 import py.com.droidalu.ejb.NotaBean;
 
 /**
@@ -58,12 +58,12 @@ public class Services {
 	 * @param pin el pin del usuario en texto plano
 	 * @return Una cadena JSON que representa la lista de notas.
 	 * 
-	 * @see py.com.droidalu.dto.ListaNotas
+	 * @see py.com.droidalu.dto.Alumno
 	 */
 	@GET
 	@Path("consulta/notas")
 	@Produces("application/json")
-	public ListaNotas getNotas(@QueryParam("id") String id,
+	public Alumno getNotas(@QueryParam("id") String id,
 			@QueryParam("pin") String pin) {
 		return getListaNotas(id, pin);
 	}
@@ -74,8 +74,8 @@ public class Services {
 	 * @param pin el pin del usuario en texto plano
 	 * @return Una cadena JSON que representa la lista de notas.
 	 */
-	private ListaNotas getListaNotas(String id, String pin) {
-		ListaNotas notas = null;
+	private Alumno getListaNotas(String id, String pin) {
+		Alumno notas = null;
 
 		if (notaBean != null) {
 			notas = notaBean.getNotas(id, pin);

@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import py.com.droidalu.dto.ListaNotas;
+import py.com.droidalu.dto.Alumno;
 import py.com.droidalu.dto.Nota;
 import py.com.droidalu.util.Conexion;
 
@@ -32,7 +32,7 @@ public class NotaHelper {
 								" AND alu.cedula = '#' "+ 
 								" AND alu.cip = '?'" ;
 	
-	
+	private String alumnoQuery = "SELECT nombre, apellido FROM alumno where cedula='#' and cip='?'";
 	
 	
 	public NotaHelper() {
@@ -44,14 +44,14 @@ public class NotaHelper {
 		}
 	}
 	
-	public ListaNotas getNotasFinales(String id, String pin) {
+	public Alumno getNotasFinales(String id, String pin) {
 		
 		ArrayList<Nota> notas = new ArrayList<Nota>();
-		
+		Alumno alu = new Alumno();
 		try {
 			String query = notasQuery.replace("#",id).replace("?", pin);
-			ps = conn.prepareStatement(query);
 			
+			ps = conn.prepareStatement(query);
 			System.out.println("PS:"+ ps);
 			rs = ps.executeQuery();
 			
@@ -64,12 +64,23 @@ public class NotaHelper {
 				System.out.println("Nota: "+ nota);
 				notas.add(nota);
 			}
+			
+			query = alumnoQuery.replace("#",id).replace("?", pin);
+			ps = conn.prepareStatement(query);
+			rs = ps.executeQuery();
+			if(rs.next()) {
+				alu.setNombre(rs.getString(1));
+				alu.setApellido(rs.getString(2));
+			}
+			rs.close();
+			ps.close();
+			conn.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		
-		ListaNotas lista = new ListaNotas();
-		lista.setNotas(notas);
-		return lista;
+		alu.setNotas(notas);
+		
+		return alu;
 	}
 }

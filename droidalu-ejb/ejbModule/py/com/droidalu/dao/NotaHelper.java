@@ -51,8 +51,6 @@ public class NotaHelper {
 		try {
 			String query = notasQuery.replace("#",id).replace("?", pin);
 			ps = conn.prepareStatement(query);
-			
-			System.out.println("PS:"+ ps);
 			rs = ps.executeQuery();
 			
 			while (rs.next()) {
@@ -61,7 +59,6 @@ public class NotaHelper {
 				nota.setAsignatura(rs.getString(1));
 				nota.setCalificacion(rs.getInt(2));
 				nota.setCalificacionLetra(rs.getString(3));
-				System.out.println("Nota: "+ nota);
 				notas.add(nota);
 			}
 		} catch (SQLException e) {

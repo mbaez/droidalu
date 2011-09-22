@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<ImageView android:layout_width="wrap_content" android:src="@drawable/evilandroidicon"
+		android:id="@+id/app_name_label" android:layout_height="wrap_content"
+		android:layout_gravity="center"></ImageView>
+	<TextView android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="@string/app_name"
+		android:layout_gravity="center" android:gravity="center"></TextView>
+
+	<LinearLayout android:layout_width="match_parent"
+		android:id="@+id/linearLayout1" android:layout_height="wrap_content">
+		<TextView android:id="@+id/textView1" android:text="CI"
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:textSize="20sp"></TextView>
+		<EditText android:layout_width="wrap_content" android:id="@+id/input_ci"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:inputType="number" android:layout_marginLeft="20sp">
+			<requestFocus></requestFocus>
+		</EditText>
+	</LinearLayout>
+
+	<LinearLayout android:layout_width="match_parent"
+		android:id="@+id/linearLayout1" android:layout_height="wrap_content">
+		<TextView android:id="@+id/textView1" android:text="PIN"
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:textSize="20sp"></TextView>
+		<EditText android:layout_width="wrap_content" android:id="@+id/input_pin"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:inputType="number" android:layout_marginLeft="6sp">
+		</EditText>
+	</LinearLayout>
+
+	<Button android:text="OK" android:id="@+id/ok_button"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+
+</LinearLayout>

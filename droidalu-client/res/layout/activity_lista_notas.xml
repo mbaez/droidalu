@@ -4,6 +4,9 @@
 	android:layout_height="match_parent">
 	<TextView android:layout_width="wrap_content" android:id="@+id/label_nombre"
 		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_height="wrap_content" android:text="Fulano de Tal" android:gravity="center" android:layout_gravity="center"></TextView>
-
+		android:layout_height="wrap_content" android:text="Fulano de Tal"
+		android:gravity="center" android:layout_gravity="center"></TextView>
+	<ListView android:id="@android:id/list"
+		android:drawSelectorOnTop="false" android:layout_weight="1"
+		android:layout_height="0dip" android:layout_width="match_parent" />
 </LinearLayout>

@@ -50,9 +50,13 @@ public class NotaHelper {
 		Alumno alu = new Alumno();
 		try {
 			String query = notasQuery.replace("#",id).replace("?", pin);
+<<<<<<< HEAD
 			
 			ps = conn.prepareStatement(query);
 			System.out.println("PS:"+ ps);
+=======
+			ps = conn.prepareStatement(query);
+>>>>>>> 2bdb98cb116d5029cc80648c1822abeab7a8e9bf
 			rs = ps.executeQuery();
 			
 			while (rs.next()) {
@@ -61,7 +65,6 @@ public class NotaHelper {
 				nota.setAsignatura(rs.getString(1));
 				nota.setCalificacion(rs.getInt(2));
 				nota.setCalificacionLetra(rs.getString(3));
-				System.out.println("Nota: "+ nota);
 				notas.add(nota);
 			}
 			

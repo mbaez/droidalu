@@ -3,7 +3,7 @@ package py.com.droidalu.util;
 import java.sql.*;
 /**
  * 
- * @author mxbg
+ * @author Maximiliano Báez <mxbg.py@gmail.com>
  *
  */
 public class Conexion {

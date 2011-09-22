@@ -4,7 +4,7 @@ import javax.ejb.Local;
 import py.com.droidalu.dto.ListaNotas;
 /**
  * 
- * @author mxbg
+ * @author Maximiliano Báez <mxbg.py@gmail.com>
  *
  */
 

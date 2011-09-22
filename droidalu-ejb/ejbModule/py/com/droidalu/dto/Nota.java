@@ -16,7 +16,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "nota")
 public class Nota {
 	private Integer calificacion;
-	private Date fecha;
+	private String calificacionLetra;
 	private String asignatura;
 
 	/**
@@ -35,9 +35,9 @@ public class Nota {
 	 * @param asignatura
 	 *            asignatura a que pertenece la nota.
 	 */
-	public Nota(Integer nota, Date fecha, String asignatura) {
+	public Nota(Integer nota, String calificacionLetra, String asignatura) {
 		this.setCalificacion(nota);
-		this.setFecha(fecha);
+		this.setCalificacionLetra(calificacionLetra);
 		this.setAsignatura(asignatura);
 	}
 
@@ -65,16 +65,16 @@ public class Nota {
 	 * @param fecha
 	 *            la fecha de la calificación.
 	 */
-	public void setFecha(Date fecha) {
-		this.fecha = fecha;
+	public void setCalificacionLetra(String calificacionLetra) {
+		this.calificacionLetra = calificacionLetra;
 	}
 
 	/**
 	 * Obtiene la fecha de la calificación
 	 */
 	@XmlElement
-	public Date getFecha() {
-		return fecha;
+	public String getCalificacionLetra() {
+		return calificacionLetra;
 	}
 
 	/**

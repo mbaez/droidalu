@@ -7,6 +7,7 @@ import javax.ejb.Stateless;
 
 import org.jboss.ejb3.annotation.LocalBinding;
 
+import py.com.droidalu.dao.NotaHelper;
 import py.com.droidalu.dto.ListaNotas;
 import py.com.droidalu.dto.Nota;
 
@@ -22,7 +23,9 @@ public class NotaBeanImpl implements NotaBean {
 	/**
 	 * Contructor por defecto.
 	 */
+	private NotaHelper helper;
 	public NotaBeanImpl() {
+		
 	}
 
 	/**
@@ -35,13 +38,7 @@ public class NotaBeanImpl implements NotaBean {
 	 */
 	@Override
 	public ListaNotas getNotas(String id, String pin) {
-		/**
-		 * Obtener aquí el listado de las notas, utilizar NotaHelper
-		 */
-		ArrayList<Nota> list = new ArrayList<Nota>();
-		list.add(new Nota(5, new Date(), "Algoritmos I"));
-		list.add(new Nota(2, new Date(), "Algoritmos II"));
-
-		return new ListaNotas(list);
+		helper = new NotaHelper(); 
+		return helper.getNotasFinales(id, pin);
 	}
 }

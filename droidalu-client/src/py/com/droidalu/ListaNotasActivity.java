@@ -19,7 +19,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+
 
 import com.google.gson.Gson;
 
@@ -102,17 +104,35 @@ public class ListaNotasActivity extends ListActivity {
 
 			TextView title = (TextView) view.findViewById(R.id.nombre_materia);
 			title.setText(mTitles.get(position));
+			ImageView image = (ImageView) view.findViewById(R.id.icono);
+			String nota = mContents.get(position);
+			
+			if(nota.contains("1"))
+				image.setImageDrawable(getResources().getDrawable(R.drawable.ic_nota_1));
+			else if(nota.contains("2"))
+				image.setImageDrawable(getResources().getDrawable(R.drawable.ic_nota_2));
+			else if(nota.contains("3"))
+				image.setImageDrawable(getResources().getDrawable(R.drawable.ic_nota_3));
+			else if(nota.contains("4"))
+				image.setImageDrawable(getResources().getDrawable(R.drawable.ic_nota_4));
+			else if(nota.contains("5"))
+				image.setImageDrawable(getResources().getDrawable(R.drawable.ic_nota_5));
+			
 			title.setSelected(true);
 
 			TextView content = (TextView) view
 					.findViewById(R.id.nota);
-			content.setText(mContents.get(position));
+			content.setText(nota);
 
 			return view;
 		}
 
 	}
-	
+	/**
+	 * 
+	 * @param url
+	 * @return
+	 */
 	private String getNotas(String url) {
 		HttpGet getURL = new HttpGet(url);
 		HttpHost host = new HttpHost(HOSTNAME, PORT);

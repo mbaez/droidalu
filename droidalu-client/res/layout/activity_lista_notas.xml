@@ -2,10 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical" android:layout_width="match_parent"
 	android:layout_height="match_parent">
-	<TextView android:layout_width="wrap_content" android:id="@+id/label_nombre"
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_height="wrap_content" android:text="Fulano de Tal"
-		android:gravity="center" android:layout_gravity="center"></TextView>
+    <LinearLayout android:id="@+id/linearLayout1" android:layout_width="match_parent" android:background="@drawable/background" android:layout_height="55dp">
+        <ImageView android:src="@drawable/icon" android:id="@+id/imageView1" android:layout_width="65dp" android:layout_height="match_parent"></ImageView>
+        <TextView 
+            android:layout_width="match_parent" 
+        	android:textAppearance="?android:attr/textAppearanceLarge" 
+        	android:text="Fulano de Tal" 
+        	android:ellipsize="marquee" 
+        	android:marqueeRepeatLimit="1" 
+        	android:maxLines="1" 
+        	android:scrollHorizontally="true"
+            android:id="@+id/label_nombre" android:layout_height="match_parent" android:gravity="center_vertical">
+        </TextView>
+    </LinearLayout>
 	<ListView android:id="@android:id/list"
 		android:drawSelectorOnTop="false" android:layout_weight="1"
 		android:layout_height="0dip" android:layout_width="match_parent" />

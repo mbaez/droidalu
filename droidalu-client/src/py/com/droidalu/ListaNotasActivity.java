@@ -27,8 +27,9 @@ public class ListaNotasActivity extends ListActivity {
 		Gson gson = new Gson();
 		Response resp = gson.fromJson(jsonResponse, Response.class);
 		TextView nombre = (TextView) findViewById(R.id.label_nombre);
-		nombre.setText(resp.getAlumno().getNombre() + "\n"
+		nombre.setText(resp.getAlumno().getNombre() + " "
 				+ resp.getAlumno().getApellido());
+		nombre.setSelected(true);
 
 		setListAdapter(new ListaNotasCursorAdapter(this, resp.getAlumno()));
 	}

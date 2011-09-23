@@ -2,37 +2,33 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical" android:layout_width="fill_parent"
 	android:layout_height="fill_parent" android:weightSum="1">
-	<ImageView android:layout_width="wrap_content" android:src="@drawable/evilandroidicon"
-		android:id="@+id/app_name_label" android:layout_height="wrap_content"
-		android:layout_gravity="center"></ImageView>
-	<TextView android:layout_width="fill_parent"
-		android:layout_height="wrap_content" android:text="@string/app_name"
-		android:layout_gravity="center" android:gravity="center" android:layout_weight="0"></TextView>
+	<ImageView android:layout_width="wrap_content" android:id="@+id/app_name_label" android:layout_height="wrap_content"
+		android:layout_gravity="center" android:src="@drawable/droidalulogo" android:layout_marginBottom="10sp" android:layout_marginTop="15sp"></ImageView>
 
 	<LinearLayout android:layout_width="match_parent"
-		android:id="@+id/linearLayout1" android:layout_height="wrap_content">
+		android:id="@+id/linearLayout1" android:layout_height="wrap_content" android:layout_marginTop="10sp">
 		<TextView android:id="@+id/textView1" android:text="CI"
 			android:layout_height="wrap_content" android:layout_width="wrap_content"
-			android:textSize="20sp"></TextView>
+			android:textSize="20sp" android:layout_marginLeft="10sp"></TextView>
 		<EditText android:layout_width="wrap_content" android:id="@+id/input_ci"
 			android:layout_height="wrap_content" android:layout_weight="1"
-			android:inputType="number" android:layout_marginLeft="20sp">
+			android:inputType="number" android:layout_marginLeft="20sp" android:layout_marginRight="10sp">
 			<requestFocus></requestFocus>
 		</EditText>
 	</LinearLayout>
 
 	<LinearLayout android:layout_width="match_parent"
-		android:id="@+id/linearLayout1" android:layout_height="wrap_content">
+		android:id="@+id/linearLayout1" android:layout_height="wrap_content" android:layout_marginTop="10sp">
 		<TextView android:id="@+id/textView1" android:text="PIN"
 			android:layout_height="wrap_content" android:layout_width="wrap_content"
-			android:textSize="20sp"></TextView>
+			android:textSize="20sp" android:layout_marginLeft="10sp"></TextView>
 		<EditText android:layout_width="wrap_content" android:id="@+id/input_pin"
 			android:layout_height="wrap_content" android:layout_weight="1"
-			android:layout_marginLeft="6sp" android:inputType="textPassword">
+			android:layout_marginLeft="6sp" android:inputType="textPassword" android:layout_marginRight="10sp">
 		</EditText>
 	</LinearLayout>
 
 	<Button android:text="Acceder" android:id="@+id/ok_button"
-		android:layout_width="125dp" android:layout_height="wrap_content" android:layout_gravity="center"></Button>
+		android:layout_width="125dp" android:layout_height="wrap_content" android:layout_gravity="center" android:layout_marginTop="10sp"></Button>
 
 </LinearLayout>

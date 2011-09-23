@@ -1,8 +1,5 @@
 package py.com.droidalu;
 
-import java.util.Date;
-
-
 /**
  * Clase que encapsula una nota. Esta clase está anotada de manera que sea
  * convertible a JSON. Ejemplo:
